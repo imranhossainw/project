@@ -1,0 +1,997 @@
+/* ===================== font family css start ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Literata:opsz,wght@7..72,200;7..72,300;7..72,400;7..72,500;7..72,600;7..72,700;7..72,800;7..72,900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+/* --------------------- font family css end --------------------------- */
+/* ===================== common css css start ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+.common_head h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    text-align: center;
+}
+
+/* --------------------- common css css end --------------------------- */
+/* ===================== veriable css start ========================= */
+:root {
+    --IBM_PLEX: 'IBM Plex Sans', sans-serif;
+    --primary_color: #fff;
+    --band_color: #937334;
+    --literata: 'Literata', serif;
+}
+
+/* --------------------- veriable css end --------------------------- */
+/* ===================== menu css start ========================= */
+.main_menu {
+    width: 100%;
+    height: 51px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.main_menu ul {
+    gap: 25px;
+}
+
+.main_menu ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color) !important;
+    transition: all linear 0.3s;
+    position: relative;
+}
+
+.main_menu ul li a:hover {
+    color: var(--band_color) !important;
+    background: transparent;
+}
+
+.main_menu ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--band_color);
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.main_menu ul li a:hover::after {
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+.menu_icon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.main_menu .menu_icon a {
+    color: var(--primary_color);
+    transition: all linear 0.3s;
+}
+
+.main_menu .menu_icon a:hover {
+    color: var(--band_color);
+}
+.src_item{
+    background: transparent; 
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all linear 0.3s;
+}
+.src_item:hover{
+    border-color: var(--band_color);
+}
+.src_icon{
+    color: #D9D9D9;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all linear 0.3s;
+}
+.src_item:hover .src_icon{
+    border-color: var(--band_color);
+}
+.src_text{
+    outline: none;
+    border: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm_plex);
+    color: var(--primary_color);
+    padding-left: 15px;
+    text-align: center;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+.src_item:hover .src_text{
+    visibility: visible;
+    height: 25px;
+    width: 250px;
+}
+/* --------------------- menu css end --------------------------- */
+/* ===================== banner css start ========================= */
+#banner {
+    width: 100%;
+    background: url(../image/banner-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 171px 0 109px;
+}
+
+.banner_head h1 {
+    width: 443px;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 38px;
+}
+
+.banner_head h1 span {
+    color: var(--band_color);
+}
+
+.banner_button a {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid var(--band_color);
+    overflow: hidden;
+    transition: all linear 0.3s;
+    margin: 73px 0 0 10px;
+}
+
+.banner_button a:hover {
+    width: 200px;
+    height: 50px;
+}
+
+.banner_button a .banner_icon_img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid var(--band_color);
+    background: transparent;
+    padding: 10px;
+    box-shadow: -3px 1px 16px 10px #937334;
+}
+
+.banner_button a span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    margin-left: 14px;
+}
+
+.banner_image {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.banner_image .banner_img_payer {
+    height: 70px;
+    width: 101px;
+}
+
+.phone_img {
+    width: 242px;
+    height: 498px;
+    background: url(../image/frem.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.phone_img img {
+    width: 217px !important;
+    height: 462px;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+.banner_img_payer .img_payer {
+    width: 101px;
+    height: 70px;
+    position: absolute;
+    top: 273px;
+    left: 105px;
+    z-index: 998;
+}
+
+.banner_img_payer span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: #000;
+    position: absolute;
+    top: 288px;
+    left: 123px;
+    z-index: 999;
+}
+
+.img_safe_and_esey .safe_and_esey {
+    width: 121px;
+    height: 125px;
+    position: absolute;
+    top: -34px;
+    right: 115px;
+    z-index: 998;
+}
+
+.img_safe_and_esey span {
+    width: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Potta One', serif;
+    color: #000;
+    position: absolute;
+    top: -11px;
+    right: 153px;
+    z-index: 999;
+}
+
+/* --------------------- banner css end --------------------------- */
+/* ===================== about css start ========================= */
+#about_part {
+    padding: 50px 0 113px;
+    cursor: pointer;
+}
+
+.about_img {
+    width: 550px;
+    height: 600px;
+    margin-top: 61px;
+    background: url(../image/about-bg.png);
+    background-repeat: no-repeat;
+
+}
+
+.about_img img {
+    width: 340px;
+    height: 506px;
+    margin-left: 61px;
+}
+
+.about_head h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    position: relative;
+}
+
+.about_head h2::after {
+    content: '';
+    width: 180px;
+    height: 1px;
+    background: var(--primary_color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.about_head p {
+    width: 431px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    margin: 34px 0 23px;
+}
+
+.app_adveantae h3 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    margin-bottom: 23px;
+}
+
+.accordin {
+    width: 446px;
+}
+
+.accordin .contentBx {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.accordin .contentBx .label {
+    position: relative;
+    padding: 24px 0 24px 10px;
+    border: 2px solid #000;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: transparent;
+    box-shadow: 0px 7px 13px 0px rgba(191, 185, 185, 0.551);
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all linear 0.3s;
+}
+
+.accordin .contentBx .label:hover {
+    border: 2px solid var(--band_color);
+}
+
+.accordin .contentBx .label h4 {
+    width: 365px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--IBM_PLEX);
+    color: #fff;
+}
+
+.accordin .contentBx .label .share {
+    color: #fff;
+    margin-right: 9px;
+}
+
+.accordin .contentBx .label .arrow {
+    color: #fff;
+    margin-left: 9px;
+}
+
+.accordin .contentBx .contant {
+    position: relative;
+    background: transparent;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.accordin .contentBx .contant p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+}
+
+.accordin .contentBx .contant p span a {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--IBM_PLEX);
+    color: blue;
+    transition: all linear 0.3s;
+}
+
+.accordin .contentBx .contant p span a:hover {
+    color: var(--band_color);
+}
+
+.accordin .contentBx.active .label {
+    box-shadow: none;
+    border: 2px solid var(--band_color);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.accordin .contentBx.active .contant {
+    height: auto;
+    padding: 10px;
+    border: 1px solid var(--band_color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.read_button a {
+    width: 112px;
+    height: 35px;
+    background: var(--primary_color);
+    border: 1px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--IBM_PLEX);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    transition: all linear 0.3s;
+}
+
+.read_button a:hover {
+    background: transparent;
+    color: var(--band_color);
+    border-color: var(--band_color);
+}
+
+/* --------------------- about css end --------------------------- */
+/* ===================== five_pillars css start ========================= */
+#five_pillars {
+    padding: 50px 0;
+}
+
+.five_pillars_head h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    text-align: center;
+}
+
+.five_pillars_head h2 span {
+    color: var(--band_color);
+}
+
+.five_pillars_islam {
+    margin: 0 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.five_pillars_main_box {
+    width: 272px;
+    margin-top: 150px;
+    padding-top: 45px;
+    cursor: pointer;
+    position: relative;
+}
+
+.image_box {
+    width: 90px;
+    height: 90px;
+    border: 1px solid var(--band_color);
+    border-radius: 50%;
+    background: var(--primary_color);
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    left: 87px;
+    z-index: 999;
+    transition: all linear 0.3s;
+}
+
+.five_pillars_main_box:hover .image_box {
+    background: var(--band_color);
+    border-color: var(--primary_color);
+    top: 0;
+}
+
+.five_pillar_text {
+    width: 272px;
+    padding: 60px 16px 20px;
+    background: var(--primary_color);
+    border-radius: 20px;
+    transition: all linear 0.3s;
+}
+
+.five_pillars_main_box:hover .five_pillar_text {
+    background: var(--band_color);
+}
+
+.five_pillar_text h3 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: #000;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.five_pillars_main_box:hover h3 {
+    visibility: visible;
+    color: var(--primary_color);
+    opacity: 1;
+}
+
+.five_pillar_text p {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: #020202;
+    text-align: center;
+    margin-top: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.five_pillars_main_box:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.salah_zakat {
+    margin-top: 100px;
+}
+
+.Sawm {
+    margin-top: 50px;
+}
+
+.some_text_of_Five_pillar p {
+    width: 595px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* --------------------- five_pillars css end --------------------------- */
+/* ===================== prayers_time css start ========================= */
+#prayers_time {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: var(--background_color);
+}
+
+.prayers_time_head h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    text-align: center;
+}
+
+.prayers_time_head p {
+    width: 594px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm_plex);
+    color: var(--primary_color);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.prayers_time_calender_row {
+    margin-top: 82px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.claender h2 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--primary_color);
+}
+
+.claender h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    margin-top: 5px;
+}
+
+.prayer_time_schedule_row {
+    margin-top: 71px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 86px;
+
+}
+
+.prayer_time_schedule {
+    width: 130px;
+    height: 98px;
+    background: var(--primary_color);
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all linear .3s;
+}
+
+.prayer_time_schedule:hover {
+    width: 180px;
+    height: 173px;
+}
+
+.prayer_time_schedule h2 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--literata);
+    color: var(--background_color);
+    z-index: 999;
+}
+
+.prayer_time_schedule:hover h2 {
+    color: #ffff;
+    font-size: 32px;
+}
+
+.prayer_time_schedule p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm_plex);
+    color: var(--background_color);
+    transition: all linear .3s;
+    z-index: 999;
+}
+
+.prayer_time_schedule:hover p {
+    color: #ffff;
+    font-size: 20px;
+}
+
+.prayer_time_schedule .image {
+    border: 2px solid #000;
+    border-radius: 20px;
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+    transition: all linear .3s;
+    transition-delay: 0s;
+}
+
+.prayer_time_schedule:hover .image {
+    border-color: var(--band_color);
+    transform: scale(1.1);
+    opacity: 1;
+    transition-delay: .25s;
+
+}
+
+.prayer_time_schedule .image img {
+    width: 173px;
+    height: 173px;
+    border-radius: 20px;
+}
+
+/* --------------------- prayers_time css end --------------------------- */
+/* ===================== audio css start ========================= */
+#audio {
+    padding: 31px 0 23px;
+}
+
+.audio_head {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+}
+
+.audio_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.audio_icon button {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary_color);
+    border-radius: 50%;
+    color: var(--primary_color);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.3s;
+}
+
+.audio_icon button:hover {
+    background: var(--band_color);
+}
+
+.audio_icon .audio_img {
+    height: 45px;
+    width: 45px;
+    background: #D9D9D9;
+    border: 1px solid var(--primary_color);
+    border-radius: 50%;
+}
+
+.main_audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.sura h3 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    margin: 8px 0 5px;
+}
+
+.music{
+    width: 368px;
+    height: 6px;
+    border: 1px solid var(--primary_color);
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    z-index: 998;
+}
+.music .musicon{
+    height: 4px;
+    border-radius: 20px;
+    background: #FFA900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: music_on 10s linear forwards;
+}
+@keyframes music_on{
+    from{
+        width: 0;
+    }
+    to{
+        width: 90%;
+    }
+}
+.volume_icon{
+    color: var(--primary_color);
+    margin-bottom: 4px;
+    
+}
+.volume_range{
+    width: 54px;
+    height: 6px;
+    border: 1px solid var(--primary_color);
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+}
+
+.volume_range .volume_high{
+    height: 4px;
+    border-radius: 20px;
+    background: #FFA900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: volum 10s linear forwards;
+}
+@keyframes volum{
+    from{
+        width: 0;
+    }
+    to{
+        width: 90%;
+    }
+}
+
+/* --------------------- audio css end --------------------------- */
+/* ===================== menu css start ========================= */
+
+/* --------------------- menu css end --------------------------- */
+/* ===================== our team css start ========================= */
+
+/* --------------------- our teamfooter css end --------------------------- */
+/* ===================== menu css start ========================= */
+
+/* --------------------- menu css end --------------------------- */
+/* ===================== menu css start ========================= */
+
+/* --------------------- menu css end --------------------------- */
+/* ===================== menu css start ========================= */
+
+/* --------------------- menu css end --------------------------- */
+/* ===================== footer css start ========================= */
+#footer {
+    background: #d9d9d91d;
+}
+
+footer {
+    padding-top: 50px;
+    background: #000;
+    border-top-right-radius: 250px;
+    border-top-left-radius: 250px;
+}
+
+.footer_logo {
+    height: 51px;
+    width: 251px;
+}
+
+.footer_icon ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 45px;
+}
+
+.footer_icon ul li a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: var(--primary_color);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all linear 0.3s;
+}
+
+.footer_icon ul li a:hover {
+    color: var(--primary_color);
+    background: var(--band_color);
+    border-color: var(--primary_color);
+}
+
+.underline {
+    width: 100%;
+    height: 3px;
+    background: var(--band_color);
+    margin: 20px 0 30px;
+}
+
+.footer_text_head h2 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    margin-bottom: 15px;
+}
+
+.footer_text ul {
+    padding: 0;
+}
+.footer_text ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+    margin-bottom: 10px;
+    position: relative;
+    transition: all linear 0.3s;
+}
+.footer_text ul li a:hover{
+    color: var(--band_color);
+}
+.footer_text ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px ;
+    background: var(--band_color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+.footer_text ul li a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+.footer_text ul li span{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_PLEX);
+    color: var(--primary_color);
+}
+
+.footer_text ul li span {
+    margin-right: 40px;
+}
+
+.footer_text ul li .mail {
+    margin-right: 56px;
+}
+
+.fotter_button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.fotter_button a {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid var(--band_color);
+    overflow: hidden;
+    transition: all linear 0.3s;
+    margin-top: 80px;
+}
+
+.fotter_button a:hover {
+    width: 200px;
+    height: 50px;
+}
+
+.fotter_button a .footer_icon_img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid var(--band_color);
+    background: transparent;
+    padding: 10px;
+}
+
+.fotter_button a span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    margin-left: 14px;
+}
+
+.underline2 {
+    margin: 60px 0 25px;
+}
+
+.copy_right p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--primary_color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --------------------- footer css end --------------------------- */
